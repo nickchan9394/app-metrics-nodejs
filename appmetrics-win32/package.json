@@ -1,0 +1,47 @@
+{
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/RuntimeTools/appmetrics/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "ibmapm-embed": ">=19.9.0",
+    "jszip": "2.5.x",
+    "nan": "2.x",
+    "node-gyp": "5.x",
+    "semver": "^5.3.0",
+    "tar": "4.x"
+  },
+  "deprecated": false,
+  "description": "Node Application Metrics",
+  "devDependencies": {
+    "codecov": "^3.1.0",
+    "eslint": "^4.0.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "prettier": "^1.4.4",
+    "tap": "^12.0.1"
+  },
+  "directories": {
+    "lib": "lib",
+    "probes": "probes"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://github.com/RuntimeTools/appmetrics#readme",
+  "license": "Apache-2.0",
+  "name": "appmetrics-win32",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RuntimeTools/appmetrics.git"
+  },
+  "scripts": {
+    "fix-eslint": "eslint --fix {bin,lib,probes,tests}/**/*.js *.js",
+    "fix-prettier": "prettier --single-quote --trailing-comma es5 --print-width 120 --write {bin,lib,probes,tests}/**/*.js *.js",
+    "install": "echo build omitted...",
+    "pretest": "eslint .",
+    "test": "tap --reporter tap --timeout=120 tests/*tests.js tests/probes/http*test.js tests/headless_test.js",
+    "travis": "npm test"
+  },
+  "version": "5.1.1"
+}
